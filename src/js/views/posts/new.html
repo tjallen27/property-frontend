@@ -3,7 +3,9 @@
   <div class="col-md-6">
     <form ng-submit="postsNew.create()">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" ng-model="postsNew.post.title">
+      <input type="text" id="title" label="title" placeholder="Title" name="title" ng-model="postsNew.post.title">
+      <input type="number" id="price" label="price" placeholder="Price" name="price" ng-model="postsNew.post.price">
+      <input type="text" id="location" label="location" placeholder="Location" name="location" ng-model="postsNew.post.location">
       <!-- <label for="image">Image</label>
       <input type="text" id="image" name="image" ng-model="postsNew.post.image"> -->
       <label for="base64" class="inputfile-label">Upload Image</label>

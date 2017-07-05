@@ -1,9 +1,12 @@
 <div class="show-container">
   <div class="posts_container">
   <h2>{{ postsShow.post.title }}</h2>
+  <p>Location: {{ postsShow.post.location }}</p>
+  <p>£{{ postsShow.post.price }}/pcm</p>
   <img ng-src="{{ postsShow.post.image_src }}" width="200">
 
   <p class="post-body">{{ postsShow.post.body }}</p>
+
   <button ng-click="postsShow.delete()" ng-if="main.isAuthenticated() && main.currentUser.id === postsShow.post.user.id">Delete</button>
     <button ui-sref="postsEdit({id: postsShow.post.id})" ng-if="main.isAuthenticated() && main.currentUser.id === postsShow.post.user.id">Edit</button>
 </div>
