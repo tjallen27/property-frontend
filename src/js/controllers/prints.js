@@ -10,7 +10,7 @@ function PostsIndexCtrl(Post, filterFilter, $scope) {
 
   const vm = this;
   vm.all = Post.query();
-  $scope.pageSize = 4;
+  $scope.pageSize = 6;
   $scope.currentPage = 1;
 }
 
