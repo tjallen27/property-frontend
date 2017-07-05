@@ -17,7 +17,7 @@
     <!-- inject:css -->
     <!-- endinject -->
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Quicksand:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
     <script src="https://use.fontawesome.com/5f27a000c4.js"></script>
   </head>
   <body ng-controller="MainCtrl as main">
@@ -44,13 +44,10 @@
           </ul>
         </div>
       </nav>
+      <span class="register"  ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></span>
+      <span class="login" ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></span>
     </header>
 
     <main ui-view></main>
-
-    <footer>
-      <span class="register"  ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></span>
-      <span class="login" ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></span>
-    </footer>
   </body>
 </html>

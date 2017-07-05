@@ -2,6 +2,8 @@ body {
   padding: 0;
   margin: 0;
   color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 nav {
@@ -18,6 +20,10 @@ nav {
       text-transform: uppercase;
       color: #222;
       letter-spacing: 1px;
+      &:hover {
+        cursor: pointer;
+        color: #666;
+      }
     }
   }
 }
@@ -41,6 +47,7 @@ nav {
   text-align: center;
   color: #fff;
   h1 {
+    font-weight: 300;
     display: block;
     position: absolute;
     left: 50%;
@@ -53,10 +60,37 @@ nav {
     display: block;
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 67%;
     transform: translate(-50%);
     font-size: 24px;
+    font-weight: 300;
   }
+}
+
+.pagination{
+    display:table;
+    margin:20px auto;
+    .active {
+      a {
+        border: none;
+        background: none;
+        color: #666;
+        &:hover {
+          background: none;
+          color: #666;
+        }
+      }
+    }
+    li {
+      a {
+        background: none;
+        color: #666;
+        &:hover {
+          background: none;
+          color: #222;
+        }
+      }
+    }
 }
 
 .post-main {
@@ -66,9 +100,21 @@ nav {
     float: left;
     margin: 5px 20px;
     height: 525px;
+    width: 300px;
+  }
+  .image {
+    width: 300px;
+    height: 300px;
+    transition: all 0.35s ease;
+    border-radius: 10px;
+    &:hover {
+      transform: scale(1.075);
+      cursor: pointer;
+    }
   }
   h3 {
     text-align: center;
+    font-weight: 300;
   }
   a {
     color: #222;
@@ -78,8 +124,86 @@ nav {
   }
 }
 
-.post,
-.image {
-  width: 300px;
-  height: 300px;
+.show-container {
+  max-width: 700px;
+  margin: 0 auto;
+  img {
+    display: block;
+    width: 50%;
+    float: left;
+    border-radius: 10px;
+  }
+  .post-body {
+    width: 50%;
+    float: right;
+    padding: 0 10px;
+  }
+  form {
+    width: 100%;
+    float: right;
+    h3 {
+          padding-top: 20px;
+      text-align: center;
+    }
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 18px;
+      padding: 5px;
+    }
+    textarea {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      font-size: 18px;
+      padding: 5px;
+    }
+    .send {
+      background: none;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.login {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.register {
+  position: absolute;
+  top: 15px;
+  right: 75px;
+}
+
+footer {
+  width: 100%;
+  height: 160px;
+  background: #222;
+  margin: 50px 0 0 0;
+  padding: 10px 0;
+  ul {
+    padding: 20px 0;
+    width: 33%;
+    float: left;
+    li {
+      color: #fff;
+      list-style: none;
+      text-align: center;
+    }
+  }
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  p {
+    font-size: 20px;
+    padding: 10px 0;
+  }
 }
