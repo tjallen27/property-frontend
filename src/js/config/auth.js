@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .config(Auth);
 
 Auth.$inject = ['$authProvider', 'API_URL'];

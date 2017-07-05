@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .controller('PostsIndexCtrl', PostsIndexCtrl)
   .controller('PostsNewCtrl', PostsNewCtrl)
   .controller('PostsShowCtrl', PostsShowCtrl)
@@ -49,31 +49,6 @@ function PostsShowCtrl(Post, User, Comment, $stateParams, $state, $auth) {
   }
   vm.delete = postsDelete;
 
-  function addComment() {
-    vm.comment.post_id = vm.post.id;
-    vm.comment.user_id = vm.currentUser.id;
-    Comment
-      .save({ comment: vm.comment })
-      .$promise
-      .then((comment) => {
-        vm.post.comments.push(comment);
-        vm.comment = {};
-      });
-  }
-
-  vm.addComment = addComment;
-
-  function deleteComment(comment) {
-    Comment
-      .delete({ id: comment.id })
-      .$promise
-      .then(() => {
-        const index = vm.post.comments.indexOf(comment);
-        vm.post.comments.splice(index, 1);
-      });
-  }
-
-  vm.deleteComment = deleteComment;
 }
 
 PostsEditCtrl.$inject = ['Post', 'User', '$stateParams', '$state'];

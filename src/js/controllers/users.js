@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .controller('UsersIndexCtrl', UsersIndexCtrl)
   .controller('UsersShowCtrl', UsersShowCtrl);
 

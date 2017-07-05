@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope', '$state', '$auth'];

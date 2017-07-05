@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .factory('Post', Post);
 
 Post.$inject = ['$resource', 'API_URL'];

@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .config(Router);
 
 Router.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];

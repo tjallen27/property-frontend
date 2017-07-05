@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .directive('base64', base64);
 
 function base64() {

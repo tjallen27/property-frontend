@@ -11,7 +11,7 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Badmasher</title>
+    <title>Solace Property Rental</title>
     <!-- inject:js -->
     <!-- endinject -->
     <!-- inject:css -->
@@ -34,8 +34,8 @@
         <div class="collapse navbar-collapse" uib-collapse="main.isNavCollapsed">
           <ul class="nav navbar-nav">
             <li><a ui-sref="postsIndex">All Posts</a></li>
-            <li ng-if="main.isAuthenticated() && main.currentUser.id == 1"><a ui-sref="postsNew">Upload a post</a></li>
-            <li ng-if="main.isAuthenticated() && main.currentUser.id == 1"><a ui-sref="usersShow({ id: main.currentUser.id})">Your Profile</a></li>
+            <li ng-if="main.isAuthenticated()"><a ui-sref="postsNew">Upload a post</a></li>
+            <li ng-if="main.isAuthenticated()"><a ui-sref="usersShow({ id: main.currentUser.id})">Your Profile</a></li>
 
 
 

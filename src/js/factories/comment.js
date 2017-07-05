@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .factory('Comment', Comment);
 
 Comment.$inject = ['$resource', 'API_URL'];

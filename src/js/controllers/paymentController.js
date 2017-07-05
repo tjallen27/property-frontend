@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .controller('PaymentController', PaymentController);
 
 PaymentController.$inject = ['$http', 'API_URL'];

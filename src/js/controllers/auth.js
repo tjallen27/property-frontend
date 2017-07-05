@@ -1,5 +1,5 @@
 angular
-  .module('blog')
+  .module('property-app')
   .controller('AuthCtrl', AuthCtrl);
 
 AuthCtrl.$inject = ['$auth', '$state'];
