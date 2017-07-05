@@ -47,6 +47,7 @@ nav {
   text-align: center;
   color: #fff;
   h1 {
+    width: 700px;
     font-weight: 300;
     display: block;
     position: absolute;
@@ -138,6 +139,12 @@ nav {
     float: right;
     padding: 0 10px;
   }
+
+  textarea,
+  .post-body {
+  white-space: pre-wrap;
+}
+
   form {
     width: 100%;
     float: right;
@@ -152,6 +159,8 @@ nav {
       margin-bottom: 10px;
       font-size: 18px;
       padding: 5px;
+      border: none;
+      border-bottom: solid 1px #222;
     }
     textarea {
       display: block;
@@ -159,6 +168,8 @@ nav {
       width: 100%;
       font-size: 18px;
       padding: 5px;
+      border: none;
+      border-bottom: solid 1px #222;
     }
     .send {
       background: none;
@@ -171,13 +182,13 @@ nav {
 .login {
   position: absolute;
   top: 15px;
-  right: 20px;
+  left: 20px;
 }
 
 .register {
   position: absolute;
   top: 15px;
-  right: 75px;
+  left: 75px;
 }
 
 footer {
@@ -194,7 +205,20 @@ footer {
       color: #fff;
       list-style: none;
       text-align: center;
+      letter-spacing: 1px;
     }
+  }
+}
+
+.post_new {
+  max-width: 800px;
+  margin: 50px auto 0;
+  input {
+    border: none;
+    border-bottom: solid 1px #222;
+    display: block;
+    width: 200px;
+    margin-bottom: 20px;
   }
 }
 

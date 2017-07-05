@@ -10,9 +10,9 @@
     <form action="https://formspree.io/your@email.com"
       method="POST">
       <h3>Contact the owner</h3>
-      <input type="text" name="name">
-      <input type="email" name="_replyto">
-      <textarea type="text" name="message" rows="8" ></textarea>
+      <input type="text" placeholder="Subject" name="name">
+      <input type="email" placeholder="Your Email Address" name="_replyto">
+      <textarea type="text" placeholder="Your Message" name="message" rows="8" ></textarea>
       <input class="send" type="submit" value="Send">
     </form>
     <button ng-click="postsShow.delete()" ng-if="main.isAuthenticated() && main.currentUser.id === postsShow.post.user.id">Delete</button>
