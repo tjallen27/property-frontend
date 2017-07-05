@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+<base href="/">
+  <head>
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9309633193625477",
+        enable_page_level_ads: true
+      });
+    </script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Badmasher</title>
+    <!-- inject:js -->
+    <script src="/js/app.js"></script>
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- endinject -->
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Quicksand:300,400" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5f27a000c4.js"></script>
+  </head>
+  <body ng-controller="MainCtrl as main">
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-click="main.isNavCollapsed = !main.isNavCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" uib-collapse="main.isNavCollapsed">
+          <ul class="nav navbar-nav">
+            <li><a ui-sref="postsIndex">All Posts</a></li>
+            <li ng-if="main.isAuthenticated() && main.currentUser.id == 1"><a ui-sref="postsNew">Upload a post</a></li>
+            <li ng-if="main.isAuthenticated() && main.currentUser.id == 1"><a ui-sref="usersShow({ id: main.currentUser.id})">Your Profile</a></li>
+
+
+
+            <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" href="#">Logout</a></li>
+            <li><a ui-sref="about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="wavy-line small"></div>
+    </header>
+
+    <main ui-view></main>
+
+    <footer>
+      <span class="register"  ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></span>
+      <span class="login" ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></span></footer>
+    <!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100239381-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+  </body>
+</html>

@@ -1,0 +1,375 @@
+// Import all of your scss files here
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h3 {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #F89406;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: #F07009;
+  }
+}
+
+textarea,
+.post-body {
+  white-space: pre-wrap;
+}
+
+.post_new label,
+.post_new input,
+.post_new textarea {
+  display: block;
+  margin-left: 10px;
+  width: 200px;
+  button {
+    margin-left: 10px;
+  }
+}
+
+.ad {
+  display: block;
+  max-width: 75%;
+  margin: 10px auto;
+  clear:both;
+}
+
+.comment_container {
+  h2 {
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    & .comment_text {
+      margin: 0;
+    }
+  }
+  .comments {
+
+  }
+}
+
+label {
+  margin-top: 30px;
+}
+
+button {
+  margin: 20px 0 20px 10px;
+  background: #fff;
+  border: solid 1px #222;
+  padding: 10px;
+}
+
+form {
+  margin-top: 10px !important;
+}
+
+.pagination {
+  margin: 0 20px -10px;
+  li {
+    a {
+      color: #222;
+      &:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span,
+ {
+    // border-top-right-radius: 0;
+    // border-bottom-right-radius: 0;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    margin-left: 0;
+    // border-top-left-radius: 0;
+    // border-bottom-left-radius: 0;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 3;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    background-color: #333;
+    border-color: #333;
+}
+
+.navbar {
+  border: none;
+  outline: none;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    background: #fff;
+    border: none;
+    outline: none;
+}
+
+.navbar-default {
+    background-color: #fff;
+
+  .navbar-toggle {
+      border-color: none;
+  }
+}
+
+.navbar-toggle {
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #222;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #222;
+  font-family: 'Playfair Display', serif;
+}
+
+@mixin make-wavy-line($size, $thickness, $color) {
+    $spacing: $size / 1;
+    $color-begin: $spacing - $thickness / 1;
+    $color-end: $spacing + $thickness / 1;
+
+    height: $size;
+    background:
+        linear-gradient(45deg,
+            transparent $color-begin,
+            $color $color-begin,
+            $color $color-end,
+            transparent $color-end
+        ),
+        linear-gradient(135deg,
+            transparent $color-begin,
+            $color $color-begin,
+            $color $color-end,
+            transparent $color-end
+        ) $size 0;
+    background-size: $size * 2 $size;
+}
+
+.small {
+    @include make-wavy-line(15px, 1px, #F89406);
+    margin-top: -20px;
+}
+
+.post-main {
+  h1 {
+    text-align: center;
+    font-size: 120px;
+    letter-spacing: 5px;
+  }
+}
+
+.image {
+  min-width: 100%;
+  height: 300px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.post-container {
+  max-width: 78%;
+}
+
+.show-container {
+  max-width: 700px;
+  margin: 20px auto;
+  img {
+    width: 50%;
+    float: left;
+    margin: 0 10px 2px 0;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.post {
+  padding: 20px;
+  width: 50%;
+  height: 450px;
+  float: left;
+
+  img {
+    width: 100%;
+  }
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+small {
+  color: #F89406;
+}
+
+.show-hide {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255,0.8);
+  text-align: center;
+  a {
+    margin: 5px 10px;
+  }
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile-label {
+    background: #222;
+    width: 131px;
+    padding: 14px;
+    text-align: center;
+    color: #fff;
+    border: solid 5px rgba(0, 0, 0, 0.1);
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+iframe {
+  position: absolute;
+  top:35%;
+  right: 1%;
+  float: right;
+  height: 900px;
+}
+
+footer{
+  .login {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 14px;
+  }
+  .register {
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    font-size: 14px;
+  }
+}
+
+.login {
+  max-width: 200px;
+    margin-left: 10px;
+  input {
+    margin-left: 0;
+  }
+  button {
+    margin-left: 0;
+  }
+}
+
+.register {
+    max-width: 200px;
+    margin-left: 10px;
+  input {
+    margin-left: 0;
+  }
+  button {
+    margin-left: 0;
+  }
+}
+
+// iPhone portrait
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 680px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .post-main {
+      width: 100%;
+
+      h1 {
+          text-align: center;
+          font-size: 30px;
+          letter-spacing: 5px;
+      }
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    .pagination {
+      margin-bottom: 5px;
+      margin-left: 20%;
+      a {
+        font-size: 10px;
+      }
+    }
+
+    .post-container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .post {
+      padding: 0;
+      width: 50%;
+      float: left;
+      height: 255px;
+
+      p {
+        display: none;
+      }
+      .image {
+        background-position: center;
+        background-size: cover;
+        height: 180px;
+      }
+    }
+
+    .show-container {
+      p {
+        padding: 0 10px;
+      }
+    }
+
+    iframe {
+      display: none;
+    }
+}

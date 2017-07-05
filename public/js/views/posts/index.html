@@ -1,0 +1,22 @@
+
+<div ng-controller="PostsIndexCtrl as postsIndex" class="post-main">
+  <h1>BADMASHER</h1>
+  <!-- <img class="ad" src="https://s3.eu-west-2.amazonaws.com/thomas-allen/ad_banner.jpg" alt=""> -->
+    <ul class="pagination" uib-pagination total-items="postsIndex.all.length" ng-model="currentPage" items-per-page="pageSize"  boundary-link-numbers="true" rotate="false" direction-links="true"></ul>
+    <div class="post-container">
+      <div ng-repeat="post in postsIndex.all | orderBy:'created_at':true  | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize" class="post" >
+        <div  ui-sref="postsShow({id: post.id})" class="image" style="background: url('{{ post.image_src }}'); background-size: cover; background-position: center;">
+        </div>
+        <div class="overlay">
+          <small>{{ post.created_at  | date:"dd-MM-yyyy" }}</small>
+          <h3>
+            <a ui-sref="postsShow({id: post.id})">{{ post.title }}</a>
+          </h3>
+          <p ng-init="limit = 150; moreShown = false">{{ post.body | limitTo: limit }}{{ text.length > limit?'...' :'...' }}
+          </p>
+        </div>
+      </div>
+        <iframe src="https://open.spotify.com/embed/user/tja27/playlist/2wvtFe7x5JgbK0ZGbl58A4" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+</div>

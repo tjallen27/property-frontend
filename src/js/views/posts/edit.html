@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6">
+    <form style="
+    margin-top: 250px;" ng-submit="postsEdit.update()">
+      <label for="title">Post Name:</label>
+      <input type="text" id="title" ng-model="postsEdit.post.title">
+
+      <label for="body">About the post:</label>
+      <textarea id="body" body="body" ng-model="postsEdit.post.body" cols="30" rows="8"></textarea>
+
+      <label for="base64">Image</label>
+      <input type="file" base64 name="base64" id="base64" ng-model="postsNew.post.base64">
+      
+      <button>Update</button>
+    </form>
+  </div>
+</div>

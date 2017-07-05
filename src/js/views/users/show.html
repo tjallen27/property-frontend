@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Hey {{ usersShow.user.username }}! You have {{ filtered.length }} posts currently live!</h2>
+</div>
+<h2></h2>
+  <div class="container" id="user_posts">
+    <div ng-repeat="post in usersShow.user.posts | filter:query as filtered" class="post">
+      <img ui-sref="postsShow({id: post.id})" src="{{ post.image_src }}" height="300">
+      <div class="overlay">
+        <h3>{{ post.title }}</h3>
+      </div>
+    </div>
+  </div>
