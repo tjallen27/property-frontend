@@ -127,7 +127,7 @@ nav {
 }
 
 .show-container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   img {
     display: block;
@@ -173,9 +173,17 @@ nav {
       border-bottom: solid 1px #222;
     }
     .send {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 50%;
       background: none;
       border: none;
       outline: none;
+      transition: all 0.5s ease;
+      &:hover {
+        background: #333;
+        color: #fff;
+      }
     }
   }
 }
