@@ -6,6 +6,10 @@
   "engines": {
     "node": "7.4.0"
   },
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/tjallen27/property-frontend.git"
+  },
   "scripts": {
     "postinstall": "bower install && gulp deploy",
     "start": "node index"
