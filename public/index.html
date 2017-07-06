@@ -1,1 +1,55 @@
-<!DOCTYPE html><html ng-app="property-app"><base href="/"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Solace Property Rental</title><script src="/js/app.min.js"></script><link rel="stylesheet" href="/css/style.min.css"><link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet"><script src="https://use.fontawesome.com/5f27a000c4.js"></script></head><body ng-controller="MainCtrl as main"><header><nav class="navbar navbar-default" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" ng-click="main.isNavCollapsed = !main.isNavCollapsed"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="collapse navbar-collapse" uib-collapse="main.isNavCollapsed"><ul class="nav navbar-nav"><li><a ui-sref="postsIndex">View All Properties</a></li><li ng-if="main.isAuthenticated()"><a ui-sref="postsNew">Upload a post</a></li><li ng-if="main.isAuthenticated()"><a ui-sref="usersShow({ id: main.currentUser.id})">Your Profile</a></li><li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" href="#">Logout</a></li><li><a ui-sref="about">About</a></li></ul></div></nav><span class="register" ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></span> <span class="login" ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></span></header><main ui-view></main></body></html>
+<!DOCTYPE html>
+<html ng-app="property-app">
+<base href="/">
+  <head>
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9309633193625477",
+        enable_page_level_ads: true
+      });
+    </script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Solace Property Rental</title>
+    <!-- inject:js -->
+    <script src="/js/app.js"></script>
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- endinject -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5f27a000c4.js"></script>
+  </head>
+  <body ng-controller="MainCtrl as main">
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-click="main.isNavCollapsed = !main.isNavCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" uib-collapse="main.isNavCollapsed">
+          <ul class="nav navbar-nav">
+            <li><a ui-sref="postsIndex">View All Properties</a></li>
+            <li ng-if="main.isAuthenticated()"><a ui-sref="postsNew">Upload a post</a></li>
+            <li ng-if="main.isAuthenticated()"><a ui-sref="usersShow({ id: main.currentUser.id})">Your Profile</a></li>
+
+
+
+            <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" href="#">Logout</a></li>
+            <li><a ui-sref="about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      <span class="register"  ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></span>
+      <span class="login" ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></span>
+    </header>
+
+    <main ui-view></main>
+  </body>
+</html>
