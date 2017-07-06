@@ -18,10 +18,12 @@
             <a ui-sref="postsShow({id: post.id})">{{ post.title }}
             </a>
           </h3>
+          <small>Date posted: {{ post.created_at | date:"MM/dd/yyyy 'at' h:mma" }}</small>
           <p>Location: {{ post.location }}</p>
           <p>£{{ post.price}}/pcm</p>
           <p ng-init="limit = 150; moreShown = false">{{ post.body | limitTo: limit }}{{ text.length > limit?'...' :'...' }}
           </p>
+
         </div>
       </div>
     </div>
