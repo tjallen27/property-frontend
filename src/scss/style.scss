@@ -39,7 +39,7 @@ nav {
 }
 
 .main--header {
-  height: 100vh;
+  height: 50vh;
   with: 100%;
   background: url('https://s3.eu-west-2.amazonaws.com/thomas-allen/pexels-photo-29410.jpg');
   background-size: cover;
@@ -52,7 +52,7 @@ nav {
     display: block;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 20%;
     transform: translate(-50%);
     text-transform: uppercase;
     font-size: 72px;
@@ -61,7 +61,7 @@ nav {
     display: block;
     position: absolute;
     left: 50%;
-    top: 67%;
+    top: 47%;
     transform: translate(-50%);
     font-size: 24px;
     font-weight: 300;

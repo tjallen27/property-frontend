@@ -7,7 +7,7 @@
 <div ng-controller="PostsIndexCtrl as postsIndex" class="post-main">
 
   <!-- <img class="ad" src="https://s3.eu-west-2.amazonaws.com/thomas-allen/ad_banner.jpg" alt=""> -->
-    <ul class="pagination text-center" uib-pagination total-items="postsIndex.all.length" ng-model="currentPage" items-per-page="pageSize"  boundary-link-numbers="true" rotate="false" direction-links="true">
+    <ul class="pagination text-center" uib-pagination total-items="postsIndex.all.length" ng-model="currentPage" id="postIndex" items-per-page="pageSize"  boundary-link-numbers="true" rotate="false" direction-links="true">
     </ul>
     <div class="post-container row">
       <div ng-repeat="post in postsIndex.all | orderBy:'created_at':true  | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize" class="post" >
